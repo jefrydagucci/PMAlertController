@@ -134,7 +134,20 @@ import UIKit
         _addTextField(textField)
     }
     func _addTextField(_ textField: UITextField){
-        alertActionStackView.addArrangedSubview(textField)
+        let contentView = UIView()
+        contentView.addSubview(textField)
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 16),
+            textField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 16)
+            ])
+        contentView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
+        contentView.layer.borderWidth = 0.7
+        contentView.layer.cornerRadius = 3.0
+        
+        alertActionStackView.addArrangedSubview(contentView)
         alertActionStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
         alertActionStackView.axis = .vertical
         textFields.append(textField)
