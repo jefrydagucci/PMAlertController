@@ -91,7 +91,7 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-5g-auJ">
-                            <rect key="frame" x="0.0" y="250.5" width="357" height="60"/>
+                            <rect key="frame" x="16" y="250.5" width="325" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="sZH-1X-biu"/>
                             </constraints>
@@ -105,9 +105,9 @@
                         <constraint firstItem="LMB-jY-4In" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="16" id="JoG-bm-Y31"/>
                         <constraint firstAttribute="bottom" secondItem="WJc-5g-auJ" secondAttribute="bottom" id="P7Y-tt-2D9"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="PzO-yc-cQ1"/>
-                        <constraint firstItem="WJc-5g-auJ" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Qvh-W5-xGk"/>
+                        <constraint firstItem="WJc-5g-auJ" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="16" id="Qvh-W5-xGk"/>
                         <constraint firstItem="jTz-eN-yAz" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Xmp-HN-MqT"/>
-                        <constraint firstAttribute="trailing" secondItem="WJc-5g-auJ" secondAttribute="trailing" id="bPd-4c-qNR"/>
+                        <constraint firstAttribute="trailing" secondItem="WJc-5g-auJ" secondAttribute="trailing" constant="16" id="bPd-4c-qNR"/>
                         <constraint firstItem="LMB-jY-4In" firstAttribute="top" secondItem="jTz-eN-yAz" secondAttribute="bottom" constant="10" id="cZ2-BF-gBn"/>
                         <constraint firstAttribute="trailing" secondItem="LMB-jY-4In" secondAttribute="trailing" constant="16" id="faR-Xx-08y"/>
                         <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="LMB-jY-4In" secondAttribute="bottom" constant="8" id="rQm-Go-qos"/>
