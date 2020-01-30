@@ -24,6 +24,7 @@ import UIKit
     @IBOutlet weak open var headerViewTopSpaceConstraint: NSLayoutConstraint!
     @IBOutlet weak open var alertImage: UIImageView!
     @IBOutlet weak open var alertContentStackView: UIStackView!
+    @IBOutlet weak open var alertTextStackView: UIStackView!
     @IBOutlet weak open var alertTitle: UILabel!
     @IBOutlet weak open var alertDescription: UILabel!
     @IBOutlet weak open var alertContentStackViewLeadingConstraint: NSLayoutConstraint!
@@ -97,7 +98,7 @@ import UIKit
     @objc open func addAction(_ alertAction: PMAlertAction){
         alertActionStackView.addArrangedSubview(alertAction)
         
-        if alertActionStackView.arrangedSubviews.count > 2 || hasTextFieldAdded(){
+        if alertActionStackView.arrangedSubviews.count > 2 {
             alertActionStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
             alertActionStackView.axis = .vertical
         }
@@ -138,18 +139,17 @@ import UIKit
         contentView.addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -8),
-            textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8),
+            textField.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             textField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            textField.heightAnchor.constraint(equalToConstant: 60)
             ])
         contentView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
         contentView.layer.borderWidth = 0.7
         contentView.layer.cornerRadius = 3.0
         
-        alertActionStackView.addArrangedSubview(contentView)
-        alertActionStackViewHeightConstraint.constant = ALERT_STACK_VIEW_HEIGHT * CGFloat(alertActionStackView.arrangedSubviews.count)
-        alertActionStackView.axis = .vertical
+        alertTextStackView.addArrangedSubview(contentView)
         textFields.append(textField)
     }
     

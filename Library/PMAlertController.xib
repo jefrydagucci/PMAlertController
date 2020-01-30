@@ -15,7 +15,6 @@
                 <outlet property="alertActionStackViewBottomConstraint" destination="P7Y-tt-2D9" id="JA5-K8-NPg"/>
                 <outlet property="alertActionStackViewHeightConstraint" destination="sZH-1X-biu" id="air-m7-rmW"/>
                 <outlet property="alertActionStackViewLeadingConstraint" destination="Qvh-W5-xGk" id="MWM-nd-by1"/>
-                <outlet property="alertActionStackViewTopConstraint" destination="rQm-Go-qos" id="0zz-iC-4rb"/>
                 <outlet property="alertActionStackViewTrailingConstraint" destination="bPd-4c-qNR" id="Lgw-Ed-D7Q"/>
                 <outlet property="alertContentStackView" destination="LMB-jY-4In" id="ezT-4V-FdJ"/>
                 <outlet property="alertContentStackViewLeadingConstraint" destination="JoG-bm-Y31" id="qe7-LF-6uF"/>
@@ -24,6 +23,7 @@
                 <outlet property="alertDescription" destination="BaL-rf-G7t" id="oA9-n7-8tS"/>
                 <outlet property="alertImage" destination="Rwc-nf-sc4" id="9c2-Rv-Z2W"/>
                 <outlet property="alertMaskBackground" destination="QvX-0K-co6" id="U8C-Dt-d5N"/>
+                <outlet property="alertTextStackView" destination="hhE-uY-Ct9" id="76z-3p-FKF"/>
                 <outlet property="alertTitle" destination="boW-P6-B3N" id="Q1I-HI-El2"/>
                 <outlet property="alertView" destination="dEl-s8-6vU" id="sSB-hF-osA"/>
                 <outlet property="alertViewWidthConstraint" destination="2KX-8C-U18" id="7hM-KT-GdH"/>
@@ -90,6 +90,12 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" id="nMw-wm-Auu"/>
                             </constraints>
                         </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hhE-uY-Ct9">
+                            <rect key="frame" x="16" y="242.5" width="325" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" id="iNS-q9-XEn"/>
+                            </constraints>
+                        </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WJc-5g-auJ">
                             <rect key="frame" x="16" y="250.5" width="325" height="60"/>
                             <constraints>
@@ -107,10 +113,13 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="PzO-yc-cQ1"/>
                         <constraint firstItem="WJc-5g-auJ" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" constant="16" id="Qvh-W5-xGk"/>
                         <constraint firstItem="jTz-eN-yAz" firstAttribute="leading" secondItem="dEl-s8-6vU" secondAttribute="leading" id="Xmp-HN-MqT"/>
+                        <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="hhE-uY-Ct9" secondAttribute="bottom" constant="8" id="aOg-15-K7E"/>
                         <constraint firstAttribute="trailing" secondItem="WJc-5g-auJ" secondAttribute="trailing" constant="16" id="bPd-4c-qNR"/>
                         <constraint firstItem="LMB-jY-4In" firstAttribute="top" secondItem="jTz-eN-yAz" secondAttribute="bottom" constant="10" id="cZ2-BF-gBn"/>
+                        <constraint firstItem="LMB-jY-4In" firstAttribute="leading" secondItem="hhE-uY-Ct9" secondAttribute="leading" id="dNJ-dC-9VC"/>
                         <constraint firstAttribute="trailing" secondItem="LMB-jY-4In" secondAttribute="trailing" constant="16" id="faR-Xx-08y"/>
-                        <constraint firstItem="WJc-5g-auJ" firstAttribute="top" secondItem="LMB-jY-4In" secondAttribute="bottom" constant="8" id="rQm-Go-qos"/>
+                        <constraint firstItem="LMB-jY-4In" firstAttribute="trailing" secondItem="hhE-uY-Ct9" secondAttribute="trailing" id="jGf-Na-yld"/>
+                        <constraint firstItem="hhE-uY-Ct9" firstAttribute="top" secondItem="LMB-jY-4In" secondAttribute="bottom" id="xRh-92-ZPi"/>
                     </constraints>
                 </view>
             </subviews>
