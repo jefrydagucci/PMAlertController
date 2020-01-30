@@ -143,7 +143,7 @@ import UIKit
             textField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             textField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             textField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            textField.heightAnchor.constraint(equalToConstant: 60)
+            textField.heightAnchor.constraint(equalToConstant: 40)
             ])
         contentView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
         contentView.layer.borderWidth = 0.7
